@@ -1,47 +1,38 @@
 <template>
-  <center>
+  <!-- <center>
     <h4>CHAT</h4>
-  </center>
-  <div class="row justify-center">
-    <div style="background: #6a6a6f; width: 150vh; height: 70vh;">
-      <div class="q-pa-md row justify-center" style="width: 150vh; height: 65vh; background-color:#182028;" id="global">
-        <div style="width: 100%; max-width: 600px">
-          <q-chat-message name="me" avatar="https://cdn.quasar.dev/img/avatar1.jpg" :text="['hey, how are you?']"
-            sent />
-          <q-chat-message name="Jane" avatar="https://cdn.quasar.dev/img/avatar2.jpg"
-            :text="['doing fine, how r you?']" />
-          <q-chat-message name="Jane" avatar="https://cdn.quasar.dev/img/avatar2.jpg"
-            :text="['doing fine, how r you?']" />
-          <q-chat-message name="Jane" avatar="https://cdn.quasar.dev/img/avatar2.jpg"
-            :text="['doing fine, how r you?']" />
-          <q-chat-message name="Jane" avatar="https://cdn.quasar.dev/img/avatar2.jpg"
-            :text="['doing fine, how r you?']" />
-          <q-chat-message name="Jane" avatar="https://cdn.quasar.dev/img/avatar2.jpg"
-            :text="['doing fine, how r you?']" />
-          <q-chat-message name="Jane" avatar="https://cdn.quasar.dev/img/avatar2.jpg"
-            :text="['doing fine, how r you?']" />
-          <q-chat-message name="Jane" avatar="https://cdn.quasar.dev/img/avatar2.jpg"
-            :text="['doing fine, how r you?']" />
-          <q-chat-message name="Jane" avatar="https://cdn.quasar.dev/img/avatar2.jpg"
-            :text="['doing fine, how r you?']" />
-          <q-chat-message name="Jane" avatar="https://cdn.quasar.dev/img/avatar2.jpg"
-            :text="['doing fine, how r you?']" />
-          <q-chat-message name="Jane" avatar="https://cdn.quasar.dev/img/avatar2.jpg"
-            :text="['doing fine, how r you?']" />
-
-        </div>
+  </center> -->
+  <div class="bodyChat">
+    <div class="container">
+      <div class="header">
+        <q-avatar rounded color="primary" text-color="white" :size="'md'">J</q-avatar>
+        <span style="padding-left: 8px;">Jose Bonilla</span>
       </div>
+      <div class="chat">
+       <!--  <div style="width: 100%; max-width: 600px; padding-top: 48px;">
 
-      <div style="background:red;" class="inputChat">
+          <q-chat-message name="Jane" bg-color="blue-grey-7" text-color="cyan-1"
+            avatar="https://cdn.quasar.dev/img/avatar2.jpg" :text="['doing fine, how r you?']" />
+          <q-chat-message name="me" bg-color="cyan-1" avatar="https://cdn.quasar.dev/img/avatar1.jpg"
+            :text="['hey, how are you?']" sent />
+
+        </div> -->
+      </div>
+      <div>
+      </div>
+      <!-- <div class="inputs">
         <div>
-          <span>input</span>
+          input
         </div>
         <div>
-
+          input
         </div>
-      </div>
+      </div> -->
+      
     </div>
   </div>
+
+
 
 </template>
 
@@ -67,15 +58,50 @@ export default defineComponent({
 </script>
 
 <style scoped>
-#global {
-  background: #f1f1f1;
-  overflow-y: auto;
+.inputs {
+  background:black;
+  width: 100%;
+
 }
 
+.chat {
+  justify-content: center;
+  /* background: #E7EAEB; */
+  height: 59vh;
+  width: 100%;
+}
+
+.header {
+  color: #324559;
+  padding: 8px;
+  width: 100%;
+  height: 48px;
+  background: #F5F5F5;
+  position: absolute;
+  z-index: 1;
+}
+
+.container {
+  background: red;
+  justify-content: center;
+  width: 650px;
+  height: 65vh;
+  display: flex;
+  position: relative;
+}
+
+.bodyChat {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
 
 .inputChat {
-    display: flex;
+  display: flex;
+}
 
+.inputT {
+  flex: 2;
 }
 
 #mensajes {
@@ -85,5 +111,19 @@ export default defineComponent({
 .texto {
   padding: 4px;
   background: #fff;
+}
+
+.css-input {
+  border-color: #cccccc;
+  border-style: solid;
+  font-size: 14px;
+  padding: 7px;
+  border-radius: 37px;
+  border-width: 0px;
+  width: 100%;
+}
+
+.css-input:focus {
+  outline: none;
 }
 </style>
