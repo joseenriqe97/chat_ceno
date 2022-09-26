@@ -14,15 +14,11 @@ let users = [];
 
 app.use(cors());
 
-//setInterval(() => console.log("CANTIDAD DE USUARIOS", users.length), 1000)
-
 io.on('connection', function (socket) {
     if (users.length < 2) {
         console.log('A user connected', socket.id);
         users.push(socket.id);
-    } /* else {
-        io.emit("fullRoom");
-    } */
+    }
 
     socket.on("message", (...args) => {
         const found = users.find(r => r === socket.id)

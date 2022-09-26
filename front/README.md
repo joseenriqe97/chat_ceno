@@ -7,12 +7,21 @@ Chat a tiempo real
 
 ## Development
 
-Install with npm
+Install front with npm
 
 ```bash
   cd front
   npm i
   npm run dev
 ```
+
+Install backend with npm
+
+```bash
+  cd socket
+  npm i
+  npm run dev
+```
+
 ## Developer
 - Jose Bonilla
