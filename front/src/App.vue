@@ -127,7 +127,6 @@ export default defineComponent({
          const userLocalStorage = localStorage.getItem("user");
 
          if (!userLocalStorage) {
-            console.log("estoy indefinod")
             modalRegister.value = true
             dataUser.value.id = uuidv4()
 
